@@ -1237,8 +1237,11 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url("https://www.eglobalis.com/wp-content/uploads/2020/07/Customer-Experience-Complexities-how-to-simplify-Ricardo-Gulko.jpg");
+
 }
+
+
 
 /* line 4, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_slider.scss */
 .slider_bg_2 {
@@ -1248,6 +1251,7 @@ h3 {
 /* line 8, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_slider.scss */
 .slider_area .single_slider {
   height: 960px;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1361,6 +1365,14 @@ h3 {
   z-index: 0;
 }
 
+.expert_doctors_area .single_expert .expert_thumb img {
+  
+  transition: 0.3s;
+  transform: scale(1);
+  width: 100%;
+  height: 277px;
+}
+
 /* line 15, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_about.scss */
 .welcome_clicnic_area .welcome_thumb .thumb_1 {
   left: 0;
@@ -1392,6 +1404,7 @@ h3 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  
 }
 
 @media (max-width: 767px) {
@@ -2462,7 +2475,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_bradcam.scss */
 .breadcam_bg {
-  background-image: url(../img/banner/bradcam.png);
+  background-image: url("../img/banner/bradcam.png");
 }
 
 /* line 4, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_bradcam.scss */
