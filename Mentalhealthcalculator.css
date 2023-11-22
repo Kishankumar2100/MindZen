@@ -84,6 +84,24 @@ button:hover {
     animation: fadeInResult 1s ease-out; /* Fade-in animation for result container */
 }
 
+
+
+#positive-image {
+    max-width: 100%;
+    max-height: 257px;
+    margin-top: 20px;
+    margin-left: 103px;
+}
+@media (max-width: 767px) {
+    /* line 1, ../../Arafath/CL/january 2020/241. Medical/HTML/scss/_about.scss */
+    #positive-image {
+        max-width: 100%;
+        max-height: 257px;
+        margin-top: 20px;
+        margin-left: 2px;
+    }
+  }
+
 @keyframes fadeInResult {
     from {
         opacity: 0;
