@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link rel="stylesheet" href="sheet.css">
+    <script src="sheet.js" defer></script>
 </head>
 
 <body>
@@ -60,21 +63,22 @@
                                                         <li><a href="single-blog.html">single-blog</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
+                                                <!-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu"> -->
                                                         <li><a href="department.html">Cure Yourself</a></li>
-                                                        <li><a href="elements.html">elements</a></li>
+                                                        <!-- <li><a href="elements.html">elements</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> -->
+                                                <li><a href="elements.html">Mental Calculator</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div class="book_room">
+                                    <!-- <div class="book_room">
                                         <div class="book_btn">
-                                            <a class="popup-with-form" href="#test-form">Book  Appointment</a>
+                                            <a class="popup-with-form" href="#test-form">MindEase Companion</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -140,19 +144,77 @@
     </div>
     <!-- welcome_clicnic_area_end -->
 
+<style>#containerst {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+#header-container {
+    text-align: center;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}</style>
+
+    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://c1.wallpaperflare.com/preview/391/732/863/mental-health-wellness-psychology-mind.jpg') center/cover no-repeat fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;">
+<div id="containerst">
+    <div id="header-container">
+        <h1>Do you feel anxious? Calculate your mental health</h1>
+    </div>
+
+    <!-- Your content goes here -->
+
+    <button onclick="redirectToAnotherPage()">Calculate Now</button>
+</div>
+</div>
+
+<script>
+    function redirectToAnotherPage() {
+        // Replace 'another-page.html' with the actual page you want to redirect to
+        window.location.href = 'elements.html';
+    }
+</script>
+
     <!-- depertment_area_start  -->
-    <div class="depertment_area">
+    <div class="depertment_area" id="mild">
         <div class="container">
             <div class="row custom_align align-items-end justify-content-between">
                 <div class="col-lg-6">
                     <div class="section_title">
                         <h3>Cure Yourself</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="learn_more_btn text-right">
-                        <a href="#" class="boxed-btn">Learn more</a>
+                        <p>Feeling anxious,worried or depressed? Cure yourself with the help of these blogs and games :)</p>
                     </div>
                 </div>
             </div>
@@ -325,13 +387,13 @@
     <!-- depertment_area_end  -->
 
     <!-- expert_doctors_area_start -->
-    <div class="expert_doctors_area">
+    <div class="expert_doctors_area" id="Risk">
         <div class="container">
             <div class="row justify-content-center ">
                 <div class="col-lg-6">
                     <div class="section_title mb-55 text-center">
-                        <h3>Our Doctors</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <h3>Most Trusted Doctors </h3>
+                        <p>Near Jamshedpur</p>
                     </div>
                 </div>
             </div>
@@ -413,7 +475,7 @@
     </div>
     <!-- expert_doctors_area_end -->
 
-    <div class="book_apointment_area">
+    <div class="book_apointment_area" >
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-lg-7">
@@ -639,9 +701,26 @@
     <form id="test-form" class="white-popup-block mfp-hide">
         <div class="popup_box ">
             <div class="popup_inner">
-                <h3>
-                    Book an 
-                <span>Appointment</span>
+
+                
+                    <ul class="chatbox">
+                      <li class="chat incoming">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                        <p>Hi there 👋<br>How can I help you today?</p>
+                      </li>
+                    </ul>
+                    <div class="chat-input">
+                      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+                      <span id="send-btn" class="material-symbols-outlined">send</span>
+                    </div>
+                 
+
+
+
+
+                <!-- <h3>
+                    Chat with
+                <span>MindEase Companion</span>
                 </h3>
                 <form action="#">
                     <div class="row">
@@ -675,7 +754,7 @@
                             <button type="submit" class="boxed-btn3">Make an Appointment</button>
                         </div>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
     </form>
