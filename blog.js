@@ -1,20 +1,22 @@
-let currentSlide = 0;
-
-  function changeSlide(n) {
-    showSlide(currentSlide += n);
-  }
-
-  function showSlide(n) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    if (n >= totalSlides) {
-      currentSlide = 0;
-    } else if (n < 0) {
-      currentSlide = totalSlides - 1;
-    } else {
-      currentSlide = n;
-    }
-
-    slides.style.transform = `translateX(${-currentSlide * 100}%)`;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('http://localhost:5000/api/data')
+        .then(response => response.json())
+        .then(data => {
+            console.log("data",data);
+            const blogArea = document.querySelector('.blog-area');
+            data.forEach(item => {
+                const card = `
+                    <div class="card">
+                        <img class="card-img-top" src="${item.image}" alt="${item.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.title}</h5>
+                            <p class="card-text">${item.description}</p>
+                            <a href="${item.url}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                `;
+                blogArea.innerHTML += card;
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
